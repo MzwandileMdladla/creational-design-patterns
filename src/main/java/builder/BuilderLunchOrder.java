@@ -7,14 +7,14 @@ import lombok.Getter;
  * @project design patterns
  */
 @Getter
-public class LunchOrder {
+public class BuilderLunchOrder {
 
     private String bread;
     private String condiments;
     private String dressing;
     private String meat;
 
-    public LunchOrder(Builder builder) {
+    public BuilderLunchOrder(Builder builder) {
         this.bread = builder.bread;
         this.condiments = builder.condiments;
         this.dressing = builder.dressing;
@@ -30,26 +30,26 @@ public class LunchOrder {
         public Builder() {
         }
 
-        public LunchOrder build() {
-            return new LunchOrder(this);
+        public BuilderLunchOrder build() {
+            return new BuilderLunchOrder(this);
         }
 
-        public Builder bread(String bread) {
+        public Builder setBread(String bread) {
             this.bread = bread;
             return this;
         }
 
-        public Builder condiments(String condiments) {
+        public Builder setCondiments(String condiments) {
             this.condiments = condiments;
             return this;
         }
 
-        public Builder dressing(String dressing) {
+        public Builder setDressing(String dressing) {
             this.dressing = dressing;
             return this;
         }
 
-        public Builder meat(String meat) {
+        public Builder setMeat(String meat) {
             this.meat = meat;
             return this;
         }

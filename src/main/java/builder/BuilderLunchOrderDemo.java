@@ -11,16 +11,16 @@ public class BuilderLunchOrderDemo {
 
     public static void main(String[] args) {
 
-        LunchOrder.Builder builder = new LunchOrder.Builder();
-        LunchOrder lunchOrder = builder
-                .bread("Wheat")
-                .condiments("Lettuce")
-                .dressing("Mayo")
-                .meat("Turkey")
+        BuilderLunchOrder.Builder builder = new BuilderLunchOrder.Builder();
+        BuilderLunchOrder builderLunchOrder = builder
+                .setBread("Wheat")
+                .setCondiments("Lettuce")
+                .setDressing("Mayo")
+                .setMeat("Turkey")
                 .build();
-        log.debug(lunchOrder.getBread());
-        log.debug(lunchOrder.getCondiments());
-        log.debug(lunchOrder.getDressing());
-        log.debug(lunchOrder.getMeat());
+        log.debug(builderLunchOrder.getBread());
+        log.debug(builderLunchOrder.getCondiments());
+        log.debug(builderLunchOrder.getDressing());
+        log.debug(builderLunchOrder.getMeat());
     }
 }
